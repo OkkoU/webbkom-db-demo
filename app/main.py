@@ -27,3 +27,27 @@ def ip(request: Request):
 @app.get("/ip", response_class=HTMLResponse)
 def ip(request: Request):
     return f"<h1>IP-adressen är: {request.client.host}</h1>"
+
+
+# Hotel Rooms
+rooms = [
+    {
+        "room_number": 101,
+        "type": "Single",
+        "price": 80
+    },
+    {
+        "room_number": 202,
+        "type": "Double",
+        "price": 120
+    },
+    {
+        "room_number": 303,
+        "type": "Suite",
+        "price": 250
+    }
+]
+
+@app.get("/rooms")
+def get_rooms():
+    return rooms
