@@ -1,5 +1,0 @@
-@url = http://localhost:8080
-
-### Hämta alla rum
-GET {{url}}/rooms
-Content-Type: application/json
